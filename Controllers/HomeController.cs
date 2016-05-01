@@ -31,5 +31,16 @@ namespace aspnetcore_issue4553.Controllers
                 Model = model
             });
         }
+
+        [HttpPost]
+        [Route("3")]
+        public ActionResult Index3(CreationModel2 model)
+        {
+            return new ObjectResult(new
+            {
+                IsValid = ModelState.IsValid,
+                Model = model
+            });
+        }
     }
 }
